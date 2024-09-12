@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Generate Image from Text</title>
+</head>
+<body>
+    <h2>Generate Image from Text</h2>
+    <form id="textForm" action="generate-image" method="get">
+        <label for="textInput">Enter Text:</label>
+        <input type="text" id="textInput" name="text" required/>
+        <button type="submit">Generate Image</button>
+    </form>
+
+    <div id="imageContainer" style="display: none;">
+        <h3>Generated Image:</h3>
+        <img id="generatedImage" alt="Generated Image"/>
+    </div>
+
+    <script>
+        // Function to display generated image after successful form submission
+    /*    function displayImage(imageUrl) {
+            document.getElementById("generatedImage").src = imageUrl;
+            document.getElementById("imageContainer").style.display = "block";
+        }
+
+        // Submit form using AJAX
+        document.getElementById("textForm").addEventListener("submit", function(event) {
+            event.preventDefault();
+            var formData = new FormData(this);
+            fetch(this.getAttribute("action"), {
+                method: "get",
+                body: formData
+            })
+            .then(response => {
+                if (response.ok) {
+                    return response.blob();
+                }
+                throw new Error("Network response was not ok.");
+            })
+            .then(blob => {
+                var imageUrl = URL.createObjectURL(blob);
+                displayImage(imageUrl);
+            })
+            .catch(error => console.error("Error:", error));
+        });*/
+    </script>
+</body>
+</html>
